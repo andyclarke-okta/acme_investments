@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewData["Title"] = "CVS SCIM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div id="entry-box" class="rounded-6 sign-in-content">
+    <p id="demo"></p>
+    <fieldset style="display:block;">
+        <h2>Acme Financial Investments</h2>
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div class="docs-section" id="intro">
+                <p class="lead">This is protected content of Sample Application</p>
+                <p class="lead">Available only after successful authentication</p>
+            </div>
+        }
+        else
+        {
+            <div class="docs-section" id="intro">
+                <p class="lead">This is Unprotected landing page of Application</p>
+                <p class="lead">Use Login above to authenticate</p>
+            </div>
+        }
+    </fieldset>
+
+    <div>
+        <p>Balanced portfolios in an ever changing environment of, government regulations, tax incentives and supply chain issue present a unique challenge to today's investors. Market trends are divering from past models. We offer expert analysis from industry experts</p>
+    </div>
+
+
+
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div>
+            <img src="~/img/stock_chart_1150.jpg" />
+        </div>
+    }
+
+
+    <div class="card-group">
+        <div class="card">
+            <img src="~/img/medical_600.jpg" class="card-img-top" alt="Commercial">
+            <div class="card-body">
+                <h5 class="card-title">Market Specific</h5>
+                <p class="card-text">  </p>
+                @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/img/effiel_tower_600.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">International</h5>
+                <p class="card-text">  </p>
+
+            </div>
+        </div>
+        <div class="card">
+            <img src="~/img/wind_farm.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Sustainable</h5>
+                <p class="card-text"></p>
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+</div>
+
